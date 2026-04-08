@@ -54,7 +54,7 @@ const AboutSection = () => {
                     </div>
                   </div>
                   <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary via-cyan-700 to-primary mb-2">Dharitri Maharana</h3>
-                  <p className="text-lg text-muted-foreground">Software Developer</p>
+                  <p className="text-lg text-muted-foreground">Software Engineer</p>
                 </div>
               </div>
             </div>
@@ -68,26 +68,25 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-3 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate <span className="text-foreground font-medium">Full Stack Developer</span> with 
-                3 years of experience designing and developing scalable, high-performance web 
-                applications using React.js, Next.js, Node.js, NestJS, and modern JavaScript frameworks.
+                I am a passionate <span className="text-foreground font-medium">Full Stack Developer</span> with 
+                3 years of experience engineering scalable, production-grade web applications utilizing 
+                <span className="text-primary font-medium"> React.js, Next.js, NestJS, and PostgreSQL</span>.
               </p>
               <p>
-                Proficient in <span className="text-primary font-medium">JavaScript, TypeScript, HTML, CSS</span>, 
-                and database management, with a strong focus on clean architecture and optimized 
-                performance.
+                My expertise lies in designing robust RESTful APIs, building modular backend architectures, 
+                and optimizing database schemas. I also bring strong proficiency in implementing secure 
+                authentication alongside sophisticated Role-Based Access Control (RBAC) mechanisms.
               </p>
               <p>
-                Experienced in building seamless end-to-end solutions, integrating frontend and 
-                backend systems, and collaborating across teams to deliver robust, user-centric 
-                applications.
+                Dedicated to scalable system design and performance optimization, I consistently deliver 
+                high-quality, production-ready solutions that ensure seamless functionality and maintainability.
               </p>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 mt-10">
+            <div className="grid grid-cols-2 gap-4 mt-6">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}

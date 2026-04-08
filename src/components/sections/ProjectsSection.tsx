@@ -2,8 +2,33 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, Github, Folder } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const projects = [
+  {
+    title: 'MENUSYNC',
+    description: 'Multi-tenant restaurant management SaaS platform enabling restaurants to manage menus, tables, orders, subscriptions, and operational dashboards.',
+    tech: ['Next.js', 'React.js', 'Node.js', 'NestJS', 'PostgreSQL', 'TypeScript'],
+    features: [
+      '50+ RESTful APIs with TypeORM',
+      'Role-based analytics dashboards',
+      'Secure auth with Passport.js & RBAC',
+      'Multi-tenant database architecture',
+    ],
+  },
+  {
+    title: 'PETLY',
+    description: 'Responsive pet care and eCommerce platform enabling users to browse pet products, manage services, and track pet activities.',
+    tech: ['Next.js', 'React 19', 'TypeScript', 'Supabase', 'Redux Toolkit', 'Tailwind CSS'],
+    githublink: 'https://github.com/DharitriM/Petly-frontend',
+    website: 'https://petly-brown.vercel.app/',
+    features: [
+      'Complete eCommerce functionalities',
+      'Scalable frontend architecture',
+      'Accessible UI with shadcn/ui',
+      'Secure session management',
+    ],
+  },
   {
     title: 'T.H.E.M',
     description: 'Digital collaboration platform for managing bill uploads and negotiation workflows. Features real-time updates, secure state transitions, and comprehensive frontend flows for bill management.',
@@ -30,6 +55,8 @@ const projects = [
     title: 'Voice Task Manager',
     description: 'Voice-controlled task management app with Google Calendar integration. Create, update, and manage tasks using voice commands with auto-synced reminders.',
     tech: ['Next.js', 'Socket.io', 'Google Calendar API', 'Notion'],
+    githublink: 'https://github.com/DharitriM/voice-task-manager',
+    website: 'https://vtm-kpho.onrender.com/',
     features: [
       'Voice command support',
       'Drag-and-drop status updates',
@@ -41,6 +68,7 @@ const projects = [
     title: 'SketchUp',
     description: 'Real-time multiplayer drawing and guessing game. Players take turns sketching while others guess in real time with live canvas sharing.',
     tech: ['Next.js', 'Socket.IO', 'Canvas API'],
+    githublink: 'https://github.com/DharitriM/skribbl_clone',
     features: [
       'Live canvas sharing',
       'Instant score updates',
@@ -91,15 +119,40 @@ const ProjectsSection = () => {
                 <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <Folder className="w-6 h-6 text-primary" />
                 </div>
-                <div className="flex gap-3">
-                  <a
-                    href="https://github.com/DharitriM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+                <div className="flex gap-3">  
+                  {project?.githublink ? (
+                    <a
+                      href={project.githublink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
                   >
                     <Github size={20} />
                   </a>
+                  ) : (
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div className="p-1 cursor-help text-muted-foreground opacity-50">
+                            <Github size={20} />
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent className='bg-primary text-white'>
+                          <p>Can't share this project as per client's restriction</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  )}
+                  {project?.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+                  )}
                 </div>
               </div>
 

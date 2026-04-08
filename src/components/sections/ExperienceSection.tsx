@@ -9,12 +9,13 @@ const experiences = [
     title: 'Software Engineer',
     company: 'BrainerHub Solutions',
     location: 'Ahmedabad',
-    period: 'Feb 2023 - Present',
+    period: 'Feb 2023 - Mar 2026',
     description: [
-      'Acquired strong foundational knowledge and hands-on experience in developing, optimizing, and deploying scalable web applications using React.js, Next.js, and Node.js.',
-      'Successfully delivered over five complex, production-grade projects, managing full project lifecycles — from client communication and requirement analysis to deployment and post-launch optimization.',
-      'Worked on diverse solutions including THEM (digital collaboration platform), COMVERSE (project management system), HOMEVOTE (community voting platform), and HMIIZA (eCommerce platform).',
-      'Ensured seamless performance, clean architecture, and outstanding client satisfaction through proactive execution and attention to detail.',
+      'Delivered 7+ production-grade full-stack applications using React.js, Next.js, and Node.js, owning the complete development lifecycle from requirement analysis to deployment.',
+      'Designed and implemented 70+ scalable RESTful APIs using Node.js and Express.js, enabling seamless system communication.',
+      'Architected PostgreSQL database schemas and complex queries, improving API performance by ~30%.',
+      'Executed secure authentication using JWT and RBAC, and integrated real-time features via WebSockets/Socket.io.',
+      'Developed scalable modular architectures across multiple domains, ensuring high code quality and producing reliable solutions with high client satisfaction.',
     ],
   },
 ];

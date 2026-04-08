@@ -7,7 +7,9 @@ import {
   Database, 
   Wrench, 
   Users, 
-  Shield 
+  Shield,
+  Cloud,
+  Bot
 } from 'lucide-react';
 
 const skillCategories = [
@@ -24,12 +26,12 @@ const skillCategories = [
   {
     title: 'Backend & Databases',
     icon: Server,
-    skills: ['Node.js', 'NestJS', 'Supabase', 'MySQL', 'MongoDB', 'PostgreSQL'],
+    skills: ['Node.js', 'NestJS', 'REST APIs', 'RBAC', 'Supabase', 'MySQL', 'MongoDB', 'PostgreSQL'],
   },
   {
     title: 'Tools & Version Control',
     icon: Wrench,
-    skills: ['npm', 'Git', 'GitHub', 'Postman', 'Insomnia', 'Swagger', 'Socket.IO'],
+    skills: ['npm', 'Git', 'GitHub', 'Postman', 'Insomnia', 'Swagger', 'Socket.IO', 'WebSockets'],
   },
   {
     title: 'State & Route Management',
@@ -40,6 +42,16 @@ const skillCategories = [
     title: 'Authentication',
     icon: Shield,
     skills: ['JWT', 'OAuth', 'Supabase Auth', 'Descope'],
+  },
+  {
+    title: 'DevOps & Deployment',
+    icon: Cloud,
+    skills: ['Docker', 'CI/CD (Github Actions)', 'Vercel', 'Render', 'Linux'],
+  },
+  {
+    title: 'AI Dev Tools',
+    icon: Bot,
+    skills: ['ChatGPT', 'Claude', 'Cursor', 'GitHub Copilot', 'Antigravity'],
   },
 ];
 
@@ -96,8 +108,6 @@ const SkillsSection = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-
         {/* Soft Skills */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -122,6 +132,8 @@ const SkillsSection = () => {
             </div>
           </div>
         </motion.div>
+        </div>
+
       </div>
     </section>
   );

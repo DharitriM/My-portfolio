@@ -137,7 +137,7 @@ const ProjectsSection = () => {
                             <Github size={20} />
                           </div>
                         </TooltipTrigger>
-                        <TooltipContent className='bg-primary text-white'>
+                        <TooltipContent className='bg-primary/50 text-white'>
                           <p>Can't share this project as per client's restriction</p>
                         </TooltipContent>
                       </Tooltip>
